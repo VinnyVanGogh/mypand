@@ -6,7 +6,7 @@ from src.debugging.debug_wrapper import echo
 @echo
 def args_for_parser():
     parser = argparse.ArgumentParser(description='Convert markdown to html or pdf.')
-    parser.add_argument('file_path', metavar='file_path', type=str, nargs=1, help='The path to the markdown file to be converted.')
+    parser.add_argument('file_path', type=str, help='Path to markdown file.')
     parser.add_argument('-gh', '--github', action='store_true', help='Convert to html with github darkmode css.')
     parser.add_argument('-b', '--base64', action='store_true', help='Convert images to base64.')
     parser.add_argument('-p', '--pdf', action='store_true', help='Convert to pdf instead of html.')
@@ -34,4 +34,5 @@ def mypand(file_path):
         print(f"Please specify a conversion type. you entered: {args}")
         
 if __name__ == "__main__":
-    mypand(sys.argv[1])
+    args = args_for_parser()
+    mypand(file_path=args.file_path)
