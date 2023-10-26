@@ -5,9 +5,10 @@
 - [Prerequisites](#prerequisites)
 - [Description](#description)
 - [Installation and Setup](#installation-and-setup)
-  - [Requirements.txt](#requirements.txt)
-  - [Virtual Environment](#virtual-environment)
 - [Usage](#usage)
+  - [Markdown to Base64 Encoded HTML](#markdown-to-base64-encoded-html)
+  - [Markdown to Github HTML](#markdown-to-github-html)
+  - [Markdown to PDF](#markdown-to-pdf)
 - [Contributing](#contributing)
 - [License](#license)
 
