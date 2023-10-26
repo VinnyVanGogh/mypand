@@ -15,23 +15,39 @@ def args_for_parser():
 @echo
 def mypand(file_path):
     args = args_for_parser()
-    if args.github and args.pdf:
-        print("Invalid arguments.")
-        return
+
     if args.github and args.base64:
+        print("Both -gh and -b are provided. Prioritizing -b.")
         convert_md_to_b64_html(file_path)
         return
-    if args.github:
-        convert_md_to_html(file_path)
-        return
+
     if args.pdf:
+        if args.github:
+            print("Converting to HTML with GitHub style, then to PDF.")
+            convert_md_to_html(file_path)
+            convert_md_to_pdf(file_path)
+            return
+        if args.base64:
+            print("Converting to HTML with Base64 images, then to PDF.")
+            convert_md_to_b64_html(file_path)
+            convert_md_to_pdf(file_path)
+            return
+        print("Converting to PDF.")
         convert_md_to_pdf(file_path)
         return
+
+    if args.github:
+        print("Converting to HTML with GitHub style.")
+        convert_md_to_html(file_path)
+        return
+
     if args.base64:
+        print("Converting to HTML with Base64 images.")
         convert_md_to_b64_html(file_path)
         return
-    else:
-        print(f"Please specify a conversion type. you entered: {args}")
+
+    print(f"Please specify a conversion type. You entered: {args}")
+
         
 if __name__ == "__main__":
     args = args_for_parser()
