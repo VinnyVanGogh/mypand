@@ -66,7 +66,7 @@ python3 mypand.py "/path/to/file.md" -b/--base64, -gh/--github, or -p/--pdf
   - you can run this with either -b or --base64
 
 ```shell
-python3 mypand.py </path/to/file.md> -b
+python3 mypand.py "/path/to/file.md" -b
 ```
 
 ![Base64 Example](images/base64_example.png)
@@ -78,7 +78,7 @@ python3 mypand.py </path/to/file.md> -b
   - you can run this with either -gh or --github
 
 ```shell
-python3 mypand.py </path/to/file.md> -gh
+python3 mypand.py "/path/to/file.md" -gh
 ```
 
 ![Github Example](images/github_example.png)
@@ -91,7 +91,7 @@ python3 mypand.py </path/to/file.md> -gh
   - you can run this with either -p or --pdf
 
 ```shell
-python3 mypand.py </path/to/file.md> -p
+python3 mypand.py "/path/to/file.md" -p
 ```
 
 ![PDF Example](images/pdf_example.png)
