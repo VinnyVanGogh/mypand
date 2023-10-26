@@ -1,3 +1,5 @@
+**Converted by:** _[VinnyVanGogh](https://github.com/VinnyVanGogh/mypand)_
+
 # mypand
 
 ## Table of Contents
@@ -9,6 +11,7 @@
   - [Markdown to Base64 Encoded HTML](#markdown-to-base64-encoded-html)
   - [Markdown to Github HTML](#markdown-to-github-html)
   - [Markdown to PDF](#markdown-to-pdf)
+    - [An example file before conversion:](#an-example-file-before-conversion)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -54,26 +57,48 @@ python3 <-b -g or -p> </path/to/file.md>
   - -b for b64 encoded html, -g for github html, and -p for pdf
     - All converted from markdown files through pandoc
 
+**After all 3 examples, you will see another image, showing how the markdown that was converted for all 3 demos looks.**
+
+
 ### Markdown to Base64 Encoded HTML
+
 - Run the project, specifying base64 encoded images, and html with github darkmode css(You will not have to upload your files, the html is completely self contained):
 
 ```shell
 python3 -b </path/to/file.md>
 ```
 
+![Base64 Example](images/base64_example.png)
+
+
 ### Markdown to Github HTML
+
 - Run the project, specifying html with github darkmode css (you will have to upload your images with your html and make sure they are in the same dir structure as your markdown file):
 
 ```shell
 python3 -g </path/to/file.md>
 ```
 
+![Github Example](images/github_example.png)
+
+**Images WILL work, you just have to move them to the same dir, or change the path to the FULL path if you're only going to use it locally, base64 encoding is just a little more convenient for sharing.**
+
 ### Markdown to PDF
+
 - Run the project, specifying pdf(You will not have to upload your files, the pdf is completely self contained however the output is not as clean as the html, and pandoc does some funky things with moving images around in pdfs...):
 
 ```shell
 python3 -p </path/to/file.md>
 ```
+
+![PDF Example](images/pdf_example.png)
+
+
+#### An example file before conversion:
+
+- This is what the markdown file looks like before conversion:
+
+![Before Conversion](images/before_conversion.png)
 
 ## Contributing
 
