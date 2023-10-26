@@ -1,5 +1,3 @@
-**Converted by:** _[VinnyVanGogh](https://github.com/VinnyVanGogh/mypand)_
-
 # mypand
 
 ## Table of Contents
