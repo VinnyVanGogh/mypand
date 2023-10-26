@@ -13,12 +13,15 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/)
-- [Requirements.txt](requirements.txt)
+- [Python 3.8 or higher](https://www.python.org/downloads/)
+- [Pandoc](https://pandoc.org/installing.html)
 
 ## Description
 
-Provide a brief overview of your Python project, its purpose, and any relevant context. You can also include key features or goals here.
+A pandoc wrapper for converting markdown files to html and pdf files. Adds github css, allows for b64 encoding of html, and allows for pdf conversion. Makes sharing markdown files easier.
+Stay tuned for more features.
+
+- The only requirements are Python 3.8 and Pandoc.
 
 ## Installation and Setup
 
@@ -34,52 +37,43 @@ git clone https://github.com/VinnyVanGogh/mypand.git
 cd mypand
 ```
 
-
-3. Create a virtual environment:
-
-```shell
-python3 -m venv .venv
-```
-
-4. Activate the virtual environment:
+3. Run the project:
+- -b for b64 encoded html, -g for github html, and -p for pdf
+  - All converted from markdown files through pandoc
 
 ```shell
-source .venv/bin/activate
-```
-
-- If you're using Windows, activate the virtual environment with this command instead:
-
-```shell
-source .venv/Scripts/activate
-```
-
-5. Upgrade pip:
-
-```
-shell pip install --upgrade pip
-```
-
-6. Install the requirements:
-
-```shell
-pip install -r requirements.txt
-```
-
-7. Run the project:
-
-```shell
-python3 <app_name.py>
+python3 <-b -g or -p> </path/to/file.md>
 ```
 
 ## Usage
 
-Provide examples and instructions on how to use your Python project. 
-- Include code snippets and usage scenarios to help users understand how to interact with your project.
+**A pretty simple shell application that allows you to convert markdown files to html and pdf files.**
 
-Example:
-```Python
-# Add your usage commands here
+- There are three ways to run the project:
+  - -b for b64 encoded html, -g for github html, and -p for pdf
+    - All converted from markdown files through pandoc
+
+### Markdown to Base64 Encoded HTML
+- Run the project, specifying base64 encoded images, and html with github darkmode css(You will not have to upload your files, the html is completely self contained):
+
+```shell
+python3 -b </path/to/file.md>
 ```
+
+### Markdown to Github HTML
+- Run the project, specifying html with github darkmode css (you will have to upload your images with your html and make sure they are in the same dir structure as your markdown file):
+
+```shell
+python3 -g </path/to/file.md>
+```
+
+### Markdown to PDF
+- Run the project, specifying pdf(You will not have to upload your files, the pdf is completely self contained however the output is not as clean as the html, and pandoc does some funky things with moving images around in pdfs...):
+
+```shell
+python3 -p </path/to/file.md>
+```
+
 ## Contributing
 
 We welcome contributions to improve mypand. To contribute, follow these steps:

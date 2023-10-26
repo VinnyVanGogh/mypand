@@ -31,3 +31,8 @@ def format_name_with_spaces(file_path):
 @echo
 def get_file_path(file_path):
     return os.path.dirname(file_path)
+
+@echo
+def remove_temp_file(temp_file_path):
+    os.remove(temp_file_path)
+

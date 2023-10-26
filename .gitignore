@@ -2,4 +2,5 @@
 videos/
 *.log
 __pycache__
-
+.mypand_logs/
+old/

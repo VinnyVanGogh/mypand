@@ -1,8 +1,8 @@
 
 # This is your src.settings.configuration file for the pandoc conversion script, anything that you want to change should be changed here.
 LOG_STEP_COUNTER = 0
-LOG_NAME = "ViNmap_debug.log"
-LOGGING_DIR = "logging/"
+LOG_NAME = "general_debug.log"
+LOGGING_DIR = ".mypand_logs/"
 
 
 # Pandoc Arguments

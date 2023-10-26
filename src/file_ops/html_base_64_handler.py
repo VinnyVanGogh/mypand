@@ -69,5 +69,3 @@ def b64_conversion(file_path, new_file_path):
     if write_error:
         print(write_error)
         return
-    
-    print(f"New file created: {new_file_path}")
