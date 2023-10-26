@@ -42,11 +42,11 @@ cd mypand
 ```
 
 3. Run the project:
-- -b for b64 encoded html, -g for github html, and -p for pdf
+- -b for b64 encoded html, -gh for github html, and -p for pdf
   - All converted from markdown files through pandoc
 
 ```shell
-python3 <-b -g or -p> </path/to/file.md>
+python3 mypand.py "/path/to/file.md" -b/--base64, -gh/--github, or -p/--pdf
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ python3 <-b -g or -p> </path/to/file.md>
 **A pretty simple shell application that allows you to convert markdown files to html and pdf files.**
 
 - There are three ways to run the project:
-  - -b for b64 encoded html, -g for github html, and -p for pdf
+  - -b for b64 encoded html, -gh for github html, and -p for pdf
     - All converted from markdown files through pandoc
 
 **After all 3 examples, you will see another image, showing how the markdown that was converted for all 3 demos looks.**
@@ -63,9 +63,10 @@ python3 <-b -g or -p> </path/to/file.md>
 ### Markdown to Base64 Encoded HTML
 
 - Run the project, specifying base64 encoded images, and html with github darkmode css(You will not have to upload your files, the html is completely self contained):
+  - you can run this with either -b or --base64
 
 ```shell
-python3 -b </path/to/file.md>
+python3 mypand.py </path/to/file.md> -b
 ```
 
 ![Base64 Example](images/base64_example.png)
@@ -74,9 +75,10 @@ python3 -b </path/to/file.md>
 ### Markdown to Github HTML
 
 - Run the project, specifying html with github darkmode css (you will have to upload your images with your html and make sure they are in the same dir structure as your markdown file):
+  - you can run this with either -gh or --github
 
 ```shell
-python3 -g </path/to/file.md>
+python3 mypand.py </path/to/file.md> -gh
 ```
 
 ![Github Example](images/github_example.png)
@@ -86,9 +88,10 @@ python3 -g </path/to/file.md>
 ### Markdown to PDF
 
 - Run the project, specifying pdf(You will not have to upload your files, the pdf is completely self contained however the output is not as clean as the html, and pandoc does some funky things with moving images around in pdfs...):
+  - you can run this with either -p or --pdf
 
 ```shell
-python3 -p </path/to/file.md>
+python3 mypand.py </path/to/file.md> -p
 ```
 
 ![PDF Example](images/pdf_example.png)
