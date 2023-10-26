@@ -124,7 +124,7 @@ git commit -m 'Your commit message'
 4. After you have committed your changes, push to the original branch:
 
 ```shell
-git push origin <branch_name>
+git push origin 'branch_name'
 ```
 
 5. Create a pull request on the original repository and describe your changes.
