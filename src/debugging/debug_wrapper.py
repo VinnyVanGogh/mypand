@@ -19,7 +19,7 @@ log_step_counter = LOG_STEP_COUNTER
 file_handler = logging.FileHandler(new_log_path, mode='w')
 file_handler.setFormatter(logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s'))
 console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
+console_handler.setLevel(logging.CRITICAL)
 console_handler.setFormatter(logging.Formatter('%(message)s'))
 
 logger = logging.getLogger()

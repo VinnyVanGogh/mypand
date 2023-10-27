@@ -30,7 +30,7 @@ def pdf_setup(file_path):
 
 @echo
 def metadata_setup(file_path):
-    title_line = "**Converted by:** _[VinnyVanGogh](https://github.com/VinnyVanGogh/mypand)_\n"
+    title_line = "**Converted by:** _[VinnyVanGogh](https://github.com/VinnyVanGogh/mypand)_"
     add_title_line_to_md(file_path, title_line)
     metadata = extract_metadata(file_path)
     metadata_args = generate_pandoc_args(metadata)

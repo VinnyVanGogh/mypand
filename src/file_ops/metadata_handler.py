@@ -69,8 +69,18 @@ def add_title_line_to_md(file_path, title_line):
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
-    if title_line not in lines:
-        lines.insert(0, f"{title_line}\n")
+    # Remove any existing title_line(s), while stripping newline characters for comparison
+    lines = [line for line in lines if line.strip() != title_line]
 
-        with open(file_path, 'w') as file:
-            file.writelines(lines)
+    # Remove trailing newlines before appending the title_line
+    while lines and lines[-1].strip() == '':
+        lines.pop()
+
+    # Add a newline and then the title_line to the end
+    lines.extend([f"\n\n", title_line])
+
+    with open(file_path, 'w') as file:
+        file.writelines(lines)
+
+
+
